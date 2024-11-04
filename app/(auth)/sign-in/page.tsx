@@ -1,39 +1,31 @@
-// In Python, imports typically look like: from components.AuthForm import AuthForm
-// The '@' symbol in '@/components/AuthForm' is a path alias, similar to modifying PYTHONPATH
-// or using __init__.py to structure imports
+// Similar to Python import like:
+// import pandas as pd
 import AuthForm from '@/components/AuthForm'
 
-// In Python, this would be a function definition like:
-// def sign_in():
-//     return render_template(...) or return HTML component in frameworks like Django
+// This is like creating a simple Python function
+// Similar to:
+// def process_data():
 const SignIn = () => {
-  // The return statement in React/TypeScript JSX is similar to
-  // returning HTML templates in Python web frameworks like Flask or Django
-  return (
-    // <section> is an HTML element. In Python web frameworks, this would be part of a 
-    // template (e.g., Jinja2 template in Flask or Django template)
-    <section 
-      // className in React is equivalent to HTML class attribute
-      // These are Tailwind CSS classes, similar to using Bootstrap in Python web frameworks:
-      // - flex-center: centers content using flexbox
-      // - size-full: takes full width and height
-      // - max-sm:px-6: adds padding of 1.5rem (24px) on x-axis for small screens
-      className="flex-center size-full max-sm:px-6"
-    >
-      {/* 
-      In Python frameworks like Django, this would be similar to including a form component:
-      {% include 'components/auth_form.html' with form_type='sign_in' %}
-      
-      AuthForm is a custom component that handles authentication
-      The type="sign-in" prop is similar to passing kwargs in Python:
-      auth_form(type='sign_in')
-      */}
-      <AuthForm type="sign-in" />
-    </section>
-  )
+ // Like in Python when you return processed data
+ // return df
+ return (
+   // This is a container, like a wrapper around your data
+   <section 
+     // These style classes are like formatting options in pandas
+     // Similar to:
+     // df.style.set_properties(**{'text-align': 'center'})
+     className="flex-center size-full max-sm:px-6"
+   >
+     {/* 
+     This is like using a pre-made pandas function
+     The type="sign-in" is like passing parameters to a pandas function:
+     df.to_excel(type='xlsx')
+     */}
+     <AuthForm type="sign-in" />
+   </section>
+ )
 }
 
-// In Python, this would be similar to:
-// __all__ = ['SignIn']
-// or in Flask: return SignIn
+// This is like making your Python function available to use in other files:
+// Similar to having your function in a separate .py file that you can import
 export default SignIn
